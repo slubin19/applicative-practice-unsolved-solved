@@ -4,8 +4,18 @@ import { data } from "../data/data";
 // Return an array with all asteroids names discovered after a given year
 // Return example: ['name1', 'name2', ... , 'nameN']
 
-export function getAsteroidsDiscoveredAfterYear(data, year) {
+export function getAsteroidsDiscoveredAfterYear(data, year)
+{
   // Your code goes here...
+  let asteroidsAfterYear = [];
+  for (let asteroid of data.asteroids)
+  {
+    if (asteroid.discoveryYear > year)
+    {
+      asteroidsAfterYear.push(asteroid.name);
+    }
+  }
+  return asteroidsAfterYear;
 }
 
 

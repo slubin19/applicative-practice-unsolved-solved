@@ -9,9 +9,17 @@
  */
 
 
-export function find(array, callback) {
+export function find(array, callback)
+{
   // Your code goes here...
-  
+  for (let key of array)
+  {
+    if (callback(key))
+    {
+      return key;
+    }
+  }
+  return undefined;
 }
 
 

@@ -4,8 +4,16 @@ import { data } from "../data/data";
 // Return an array of all Planets' average temperatures
 // Return example: [1, 2, ... , N]
 
-export function getAllAverageTemperatures(data) {
+export function getAllAverageTemperatures(data)
+{
   // Your code goes here...
+  let averageTemps = [];
+  let planets = data.planets;
+  for (let planet of planets)
+  {
+    averageTemps.push(planet.avgTemp);
+  }
+  return averageTemps;
 }
 
 

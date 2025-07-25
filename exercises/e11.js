@@ -5,8 +5,18 @@ import { data } from "../data/data";
 // include planets with 0 moons
 // Return example: ['name1', 'name2', ... , 'nameN']
 
-export function lowMoonsPlanets(data) {
+export function lowMoonsPlanets(data)
+{
   // Your code goes here...
+  let lowMoon = [];
+  for (let planet of data.planets)
+  {
+    if (!planet.moons || planet.moons.length < 10)
+    {
+      lowMoon.push(planet.name);
+    }
+  }
+  return lowMoon;
 }
 
 // === TEST YOURSELF ===

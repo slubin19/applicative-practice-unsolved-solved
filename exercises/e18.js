@@ -4,9 +4,29 @@
  * Return example: 1902
  */
 
-export function getGreatestDiscoveryYear(data) {
+
+export function getGreatestDiscoveryYear(data)
+{
   // Your code goes here...
   // feel free to import your `maxBy` or `minBy` methods from previous lessons
+  let asteroidList = data.asteroids;
+  let years = [];
+  let maxFrequency = 0;
+  let leader = 0;
+  for (let asteroid of asteroidList)
+  {
+    years.push(asteroid.discoveryYear);
+  }
+  for (let year of years)
+  {
+    const count = years.filter(y => y === year).length;
+    if (count > maxFrequency)
+    {
+      maxFrequency = count;
+      leader = year;
+    }
+  }
+  return leader;
 }
 
 // === TEST YOURSELF ===

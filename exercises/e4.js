@@ -4,8 +4,18 @@ import { data } from "../data/data";
 // Return an array of Planets' names with gravity less than 10
 // Return example: ['name1', 'name2', ... , 'nameN']
 
-export function getPlanetsWithLowGravity(data) {
+export function getPlanetsWithLowGravity(data)
+{
   // Your code goes here...
+  let planetsLowGravity = [];
+  for (let planet of data.planets)
+  {
+    if (planet.gravity < 10)
+    {
+      planetsLowGravity.push(planet.name);
+    }
+  }
+  return planetsLowGravity;
 }
 
 

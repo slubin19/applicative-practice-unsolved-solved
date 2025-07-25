@@ -4,8 +4,16 @@ import { data } from "../data/data";
 // Return an array of all Asteroids' names
 // Return example: ['name1', 'name2', ... , 'nameN']
 
-export function getAsteroidNames(data) {
+export function getAsteroidNames(data)
+{
   // Your code goes here...
+  var asteroidNames = [];
+  var asteroids = data.asteroids;
+  for (let name of asteroids)
+  {
+    asteroidNames.push(name.name);
+  }
+  return asteroidNames;
 }
 
 

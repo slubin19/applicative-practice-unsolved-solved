@@ -4,8 +4,18 @@ import { data } from "../data/data";
 // Return an array with all Planets' names with a massValue greater or equal to a given number (1-7)
 // Return example: ['name1', 'name2', ... , 'nameN']
 
-export function getPlanetsWithMassValue(data, number) {
+export function getPlanetsWithMassValue(data, number)
+{
   // Your code goes here...
+  let planetsWithMass = [];
+  for (let planet of data.planets)
+  {
+    if (planet.mass.massValue > number)
+    {
+      planetsWithMass.push(planet.name);
+    }
+  }
+  return planetsWithMass;
 }
 
 
