@@ -6,16 +6,7 @@ import { data } from "../data/data";
 
 export function getPlanetsNamesWithMoons(data)
 {
-  // Your code goes here...
-  let planetsWithMoons = [];
-  for (let planet of data.planets)
-  {
-    if (planet.moonsCount !== undefined)
-    {
-      planetsWithMoons.push(planet.name);
-    }
-  }
-  return planetsWithMoons;
+  return data.planets.filter((planets) => planets.moons).map((planets) => planets.name);
 }
 
 
